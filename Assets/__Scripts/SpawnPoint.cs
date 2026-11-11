@@ -1,13 +1,13 @@
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-namespace LearningProgramAcademy.AstroAssault
-{
-    public class SpawnPoint : MonoBehaviour
-    {
-        private void OnDrawGizmos()
-        {
+namespace LearningProgrammingAcademy.AstroAssault {
+
+    public class SpawnPoint : MonoBehaviour {
+
+        private void OnDrawGizmos() {
             Gizmos.DrawWireSphere(transform.position, 0.25f);
         }
     }
-
 }

@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5292806941484041606}
-  - component: {fileID: 5994843244290797868}
+  - component: {fileID: 196022728950361175}
+  - component: {fileID: 667111505116918177}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5994843244290797868
+--- !u!114 &196022728950361175
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,6 +42,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 3697867705817041192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c4535438a9533478240ea8555e00ca, type: 3}
+  m_Script: {fileID: 11500000, guid: eef67d6ea1d6174428e6a8cc2607f1cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpawnPoint
+  m_EditorClassIdentifier: Assembly-CSharp::LearnProgrammingAcademy.AstroAssault.SpawnPoint
+--- !u!114 &667111505116918177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3697867705817041192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4adea5083767234a875fde3b839207e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LearnProgrammingAcademy.AstroAssault.DockSpawner
+  enemyPrefab: {fileID: -3014069748555711513, guid: 8f332daa73db2274ca81ffbf4227c5f5, type: 3}
+  spawnInterval: 1.6
+  spawnDelay: 0.2
+  enemyStartSpeed: 2
+  waypoints: []

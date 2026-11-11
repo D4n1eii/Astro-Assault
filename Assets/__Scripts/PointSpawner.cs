@@ -1,56 +1,38 @@
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
+using LearningProgrammingAcademy.Utils;
 
-namespace LearningProgramAcademy.AstroAssault
-{
-    public class PointSpawner : MonoBehaviour
-    {
+namespace LearningProgrammingAcademy.AstroAssault {
 
-        // == constants ==
-        private const string SPAWN_METHOD_NAME = "Spawn";
-
-
-        [SerializeField]
-        private GameObject enemyPrefab;
-
-        [SerializeField]
-
-        private float spawnInterval = 1.6f;
-
-        [SerializeField]
-
-        private float spawnDelay = 0.2f;
-
-        [SerializeField]
-
-        private float enemyStartSpeed;
-
+    public class PointSpawner : SpawnerBase {
 
         private IList<SpawnPoint> spawnPoints;
+        private Stack<SpawnPoint> pointsToSpawn;
 
-
-        private void Start()
-        {
-            spawnPoints = GetComponentsInChildren<SpawnPoint>();
+        // == messages ==
+        protected override void Start() {            
+            spawnPoints = GetComponentsInChildren<SpawnPoint>();           
+            ShuffleSpawnPoints();
+            base.Start();
         }
-
 
         // == private methods ==
-
-        private void SpawnRepeating()
-        {
-            InvokeRepeating(SPAWN_METHOD_NAME, spawnDelay, spawnInterval);
+        private void ShuffleSpawnPoints() {
+            pointsToSpawn = ListUtils.CreateShuffledStack(spawnPoints);
         }
 
-        private void Spawn()
-        {
-            var randomIndex = Random.Range(0, spawnPoints.Count);
-            var spawnPoint = spawnPoints[randomIndex];
+        protected override void Spawn() {
+            if (pointsToSpawn.Count == 0) {
+                ShuffleSpawnPoints();
+            }
 
-            var enemy = Instantiate(enemyPrefab);
-
+            var spawnPoint = pointsToSpawn.Pop();
+            
+            var enemy = Instantiate(enemyPrefab, enemiesParent.transform);
+            // enemy.transform.parent = enemiesParent.transform;
             enemy.transform.position = spawnPoint.transform.position;
-        }
 
+            var fallingBehavior = enemy.GetComponent<FallingBehavior>();
+            fallingBehavior.Speed = enemyStartSpeed;
+        }
     }
 }
