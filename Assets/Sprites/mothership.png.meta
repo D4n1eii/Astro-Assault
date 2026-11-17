@@ -106,7 +106,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -153,7 +153,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -166,7 +166,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -205,7 +205,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 1
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -214,11 +214,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 3853
+        y: 3854
         width: 548
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -235,12 +235,12 @@ TextureImporter:
       name: mothership_1
       rect:
         serializedVersion: 2
-        x: 565
-        y: 3853
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 564
+        y: 3854
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -258,11 +258,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1124
-        y: 3853
-        width: 547
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 3854
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -279,12 +279,12 @@ TextureImporter:
       name: mothership_3
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3453
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 3454
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -301,12 +301,12 @@ TextureImporter:
       name: mothership_4
       rect:
         serializedVersion: 2
-        x: 565
-        y: 3453
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 554
+        y: 3444
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: mothership_5
       rect:
         serializedVersion: 2
-        x: 1125
-        y: 3453
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1124
+        y: 3454
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -345,12 +345,12 @@ TextureImporter:
       name: mothership_6
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3053
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 3054
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -368,11 +368,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 564
-        y: 3053
-        width: 547
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 3054
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -389,12 +389,12 @@ TextureImporter:
       name: mothership_8
       rect:
         serializedVersion: 2
-        x: 1125
-        y: 3053
-        width: 546
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1124
+        y: 3054
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -412,11 +412,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 2653
-        width: 547
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 2654
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -434,11 +434,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 564
-        y: 2653
-        width: 547
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 2654
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,11 +456,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1124
-        y: 2653
-        width: 547
-        height: 236
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 2654
+        width: 548
+        height: 234
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -480,9 +480,9 @@ TextureImporter:
         x: 4
         y: 2116
         width: 548
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -499,12 +499,12 @@ TextureImporter:
       name: mothership_13
       rect:
         serializedVersion: 2
-        x: 565
+        x: 564
         y: 2116
-        width: 546
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -523,10 +523,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1124
         y: 2116
-        width: 547
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -543,12 +543,12 @@ TextureImporter:
       name: mothership_15
       rect:
         serializedVersion: 2
-        x: 5
+        x: 4
         y: 1716
-        width: 546
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -565,12 +565,12 @@ TextureImporter:
       name: mothership_16
       rect:
         serializedVersion: 2
-        x: 565
+        x: 564
         y: 1714
-        width: 546
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -587,12 +587,12 @@ TextureImporter:
       name: mothership_17
       rect:
         serializedVersion: 2
-        x: 1125
+        x: 1124
         y: 1714
-        width: 546
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -609,12 +609,12 @@ TextureImporter:
       name: mothership_18
       rect:
         serializedVersion: 2
-        x: 5
+        x: 4
         y: 1314
-        width: 546
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -633,10 +633,10 @@ TextureImporter:
         serializedVersion: 2
         x: 564
         y: 1314
-        width: 547
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -653,12 +653,12 @@ TextureImporter:
       name: mothership_20
       rect:
         serializedVersion: 2
-        x: 1125
+        x: 1124
         y: 1314
-        width: 546
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -677,10 +677,10 @@ TextureImporter:
         serializedVersion: 2
         x: 4
         y: 914
-        width: 547
-        height: 375
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 374
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -699,10 +699,10 @@ TextureImporter:
         serializedVersion: 2
         x: 564
         y: 916
-        width: 547
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -721,10 +721,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1124
         y: 916
-        width: 547
-        height: 373
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 548
+        height: 372
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -741,7 +741,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2333df01402554741b1085575885d840
     internalID: 0
     vertices: []
     indices: 
@@ -749,7 +749,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":1.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":2,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
       mothership_0: 21300000
       mothership_1: 21300002

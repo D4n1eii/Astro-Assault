@@ -26,13 +26,20 @@ namespace LearningProgrammingAcademy.AstroAssault
 
         private WeaponController weapon;
 
+        [SerializeField]
+        private AudioClip playerDieClip;
 
+        [SerializeField]
+        private AudioClip respawnClip;
 
         private Vector3 startPosition;
 
         private GameObject explosionsParent;
 
+        [SerializeField] private SoundController soundController;
+        public delegate void LostLifeDelegate(int livesLeft);
 
+        public static event LostLifeDelegate LostLifeEvent;
 
         public int Lives
         {
@@ -46,11 +53,11 @@ namespace LearningProgrammingAcademy.AstroAssault
             playerController = GetComponent<PlayerController>();
             weapon = GetComponent<WeaponController>();
             startPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            explosionsParent = GameObject.Find(ParentNames.EXPLOSIONS_PARENT_NAME);
+            explosionsParent = GameObject.Find(ParentUtils.EXPLOSIONS_PARENT_NAME);
 
             if (!explosionsParent)
             {
-                explosionsParent = new GameObject(ParentNames.EXPLOSIONS_PARENT_NAME);
+                explosionsParent = new GameObject(ParentUtils.EXPLOSIONS_PARENT_NAME);
             }
         }
 
@@ -61,22 +68,37 @@ namespace LearningProgrammingAcademy.AstroAssault
 
         private IEnumerator DieCoroutine()
         {
-            Debug.Log($"Die Coroutine");
             DisableComponents();
             GameObject explosion = Instantiate(explosionPrefab, explosionsParent.transform);
             explosion.transform.position = transform.position;
 
             lives--;
+            PublishLostLifeEvent();
+            soundController.PlayOneShot(playerDieClip);
             yield return new WaitForSeconds(1.5f);
 
             if (lives > 0)
             {
                 Respawn();
+                soundController.PlayOneShot(respawnClip);
             }
         }
 
+
+        private IEnumerator RespawnAnimCoroutine()
+        {
+            for (int i = 0; i <6; i++)
+            {
+                spriteRenderer.color = new Color(255f, 255f, 255f, .5f);
+                yield return new WaitForSeconds(0.2f);
+                spriteRenderer.color = new Color(255f, 255f, 255f, 255f);
+            }
+        }
+
+
         private void Respawn()
         {
+            StartCoroutine(RespawnAnimCoroutine());
             transform.position = startPosition;
             EnableComponents();
         }
@@ -104,6 +126,11 @@ namespace LearningProgrammingAcademy.AstroAssault
 
 
 
+        private void PublishLostLifeEvent()
+        {
+            LostLifeEvent?.Invoke(lives);
+        }
 
+       
     }
 }

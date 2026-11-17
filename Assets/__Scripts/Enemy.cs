@@ -16,7 +16,19 @@ namespace LearningProgrammingAcademy.AstroAssault {
         [SerializeField]
         private int scoreValue = 10;
 
+        [SerializeField]
+        public AudioClip spawnClip;
 
+        [SerializeField]
+        public AudioClip hitClip;
+
+        [SerializeField]
+        public AudioClip crashClip;
+
+
+
+
+        private SoundController soundController;
         public int ScoreValue
         {
             get { return scoreValue; }
@@ -38,6 +50,8 @@ namespace LearningProgrammingAcademy.AstroAssault {
             var bullet = collider.GetComponent<Bullet>();
             if (bullet)
             {
+                soundController.PlayOneShot(hitClip);
+
                 PublishEnemyKilledEvent();
                 SpawnExplosion(hitExplosionPrefab);
                 Destroy(bullet.gameObject);
@@ -51,17 +65,24 @@ namespace LearningProgrammingAcademy.AstroAssault {
                 SpawnExplosion(hitExplosionPrefab);
                 Destroy(gameObject);
             }
+
+           
            
         }
 
 
         private void Start()
-        {
-            explosionParent = GameObject.Find(ParentNames.EXPLOSIONS_PARENT_NAME);
+        { 
+            explosionParent = GameObject.Find(ParentUtils.EXPLOSIONS_PARENT_NAME);
 
             if (!explosionParent)
             {
-                explosionParent = new GameObject(ParentNames.EXPLOSIONS_PARENT_NAME);  
+                explosionParent = new GameObject(ParentUtils.EXPLOSIONS_PARENT_NAME);  
+            }
+            soundController = SoundController.FindSoundController();
+            if (soundController)
+            {
+                soundController.PlayOneShot(spawnClip);
             }
         }
 

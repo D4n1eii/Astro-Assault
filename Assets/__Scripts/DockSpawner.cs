@@ -18,6 +18,7 @@ namespace LearningProgrammingAcademy.AstroAssault {
         protected override void Start() {
             docks = GetComponentsInChildren<Dock>();           
             ShuffleDocks();
+            Debug.Log($"SPAWN CALLED: {gameObject.name}");
 
             base.Start();
         }
@@ -34,15 +35,23 @@ namespace LearningProgrammingAcademy.AstroAssault {
 
             var dock = docksToSpawn.Pop();
 
-            if (dock.IsFull()) {
+
+
+            if (dock.IsFull())
+            {
                 dock.Release();
             }
 
             var slot = dock.NextFreeSlot();
 
-            if (!slot) {
+
+            if (!slot)
+            {
                 return;
             }
+         
+
+  
 
             var enemy = Instantiate(enemyPrefab, slot.transform);
             enemy.transform.position = transform.position;
@@ -65,6 +74,11 @@ namespace LearningProgrammingAcademy.AstroAssault {
             var dockEntry = dock.GetEntryPoint();
             follower.AddWaypoint(dockEntry);
             follower.AddWaypoint(slot.transform.position);
+
+            PublishOnEnemySpawnedEvent();
+
+
+
 
         }
     }

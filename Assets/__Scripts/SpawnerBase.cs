@@ -25,25 +25,50 @@ namespace LearningProgrammingAcademy.AstroAssault {
 
         protected GameObject enemiesParent;
 
+
+
+
+
+        public delegate void EnemySpawnedDelegate();
+
+        public static event EnemySpawnedDelegate EnemySpawnedEvent;
         // == messages ==
         protected virtual void Start() {            
-            enemiesParent = GameObject.Find(ParentNames.ENEMIES_PARENT_NAME);
-
+            enemiesParent = GameObject.Find(ParentUtils.ENEMIES_PARENT_NAME);
             if (!enemiesParent) {
-                Debug.Log($"{ParentNames.ENEMIES_PARENT_NAME} object not found creating new one");
-                enemiesParent = new GameObject(ParentNames.ENEMIES_PARENT_NAME);
+                Debug.Log($"{ParentUtils.ENEMIES_PARENT_NAME} object not found creating new one");
+                enemiesParent = new GameObject(ParentUtils.ENEMIES_PARENT_NAME);
             }
-            
-            SpawnRepeating();
+
         }
 
         // == abstract methods ==
         protected abstract void Spawn();
 
         // == private methods ==
-        private void SpawnRepeating() {
-            InvokeRepeating(SPAWN_METHOD_NAME, spawnDelay, spawnInterval);
+        public void EnableSpawning()
+        {
+            if (!IsInvoking(SPAWN_METHOD_NAME))
+            {
+                InvokeRepeating(SPAWN_METHOD_NAME, spawnDelay, spawnInterval);
+            }
         }
+
+
+        public void DisableSpawning()
+        {
+            Debug.Log($"CANCEL INVOKE: {gameObject.name}");
+            CancelInvoke(SPAWN_METHOD_NAME);
+        }
+
+
+        protected void PublishOnEnemySpawnedEvent()
+        {
+            EnemySpawnedEvent?.Invoke();
+        }
+
+
+
     }
 
 }

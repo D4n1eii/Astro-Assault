@@ -12,20 +12,17 @@ namespace LearningProgrammingAcademy.AstroAssault.UI
 
 
         [SerializeField]
-        private Color lostLifeColor = new Color(1, 1, 1, 0.5f); 
+        private Color lostLifeColor = new Color(1, 1, 1, .5f); 
 
-        private Player player;
+        
+        private List<LifeIcon> icons = new List<LifeIcon>();
 
         private int startingLives;
 
 
-        private List<LifeIcon> icons = new List<LifeIcon>();
-
-
-
         private void Start()
         {
-            player = Object.FindAnyObjectByType<Player>();
+            var player = Object.FindAnyObjectByType<Player>();
             if (player)
             {
                 startingLives = player.Lives;
@@ -34,19 +31,15 @@ namespace LearningProgrammingAcademy.AstroAssault.UI
         }
 
 
-        private void Update()
+        private void OnEnable()
         {
-            if(player && player.Lives < startingLives)
-            {
-                for (int i = 0; i < icons.Count; i++)
-                {
-                    if (i >= player.Lives)
-                    {
-                        Debug.Log("Lives: " + player.Lives);
-                        icons[i].setImageColor(lostLifeColor);
-                    }
-                }
-            }
+            Player.LostLifeEvent += OnPlayerLifeLost;
+        }
+
+
+        private void OnDisable()
+        {
+            Player.LostLifeEvent -= OnPlayerLifeLost;
         }
 
         private void CreateIcons()
@@ -56,6 +49,19 @@ namespace LearningProgrammingAcademy.AstroAssault.UI
                 LifeIcon icon = Instantiate(lifeIconPrefab, transform);
                 icons.Add(icon);
             }
+            icons.Reverse();
+
+        }
+
+
+        private void OnPlayerLifeLost(int lives)
+        {
+            for (int i = 0; i<icons.Count; i++)
+               if(i>= lives)
+                {
+                    icons[i].setImageColor(lostLifeColor);
+                }
+
         }
     }
 }

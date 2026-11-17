@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6577628507734675093}
   - component: {fileID: 1835390753394092138}
   m_Layer: 0
-  m_Name: LifeIcon (1)
+  m_Name: LifeIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,3 +88,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 942feb342b0af1740bc6493b62afa608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LifeIcon
+  iconImage: {fileID: 6577628507734675093}

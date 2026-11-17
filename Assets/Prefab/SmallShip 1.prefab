@@ -202,6 +202,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LearnProgrammingAcademy.AstroAssault.Enemy
   hitExplosionPrefab: {fileID: 1631458098886299580, guid: a60a147420c99e74cab541d58b129199, type: 3}
   crashExplosionPrefab: {fileID: 3820805166605986934, guid: 3f07f4aaa44f1d14f9e810531e5d65a8, type: 3}
+  scoreValue: 10
+  spawnClip: {fileID: 8300000, guid: 860d0f05056282e49945200330859aaa, type: 3}
+  hitClip: {fileID: 8300000, guid: dfd2b6b8789f2cb40a85218ca85f3678, type: 3}
+  crashClip: {fileID: 8300000, guid: bed69bc01951ea14c84eae3bd14aa5cd, type: 3}
+  audioSource: {fileID: 0}
 --- !u!114 &7798945074211921784
 MonoBehaviour:
   m_ObjectHideFlags: 0

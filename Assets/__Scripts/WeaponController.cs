@@ -23,11 +23,11 @@ namespace LearningProgrammingAcademy.AstroAssault
 
         private void Start() { 
             Debug.Log("Bullet spawned successfully on object: " + gameObject.name + " with position: " + transform.position);
-            bulletsParent = GameObject.Find(ParentNames.BULLETS_PARENT_NAME);
+            bulletsParent = GameObject.Find(ParentUtils.BULLETS_PARENT_NAME);
 
             if (!bulletsParent)
             {
-                bulletsParent = new GameObject(ParentNames.BULLETS_PARENT_NAME);
+                bulletsParent = new GameObject(ParentUtils.BULLETS_PARENT_NAME);
             }
         }
 

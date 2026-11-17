@@ -3,10 +3,13 @@ using UnityEngine.UI;
 
 namespace LearningProgrammingAcademy.AstroAssault.UI
 {
+    [RequireComponent(typeof(Image))]
     public class LifeIcon : MonoBehaviour
     {
         [SerializeField]
         private Image iconImage;
+
+
 
         private void Awake()
         {

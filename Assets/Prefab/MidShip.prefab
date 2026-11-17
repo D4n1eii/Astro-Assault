@@ -151,6 +151,10 @@ MonoBehaviour:
   hitExplosionPrefab: {fileID: 1631458098886299580, guid: a60a147420c99e74cab541d58b129199, type: 3}
   crashExplosionPrefab: {fileID: 3820805166605986934, guid: 3f07f4aaa44f1d14f9e810531e5d65a8, type: 3}
   scoreValue: 100
+  spawnClip: {fileID: 8300000, guid: 51b73dd6aa87794468760538d22f50f6, type: 3}
+  hitClip: {fileID: 8300000, guid: fd9edb27ed2287743af4d2214822758e, type: 3}
+  crashClip: {fileID: 8300000, guid: bed69bc01951ea14c84eae3bd14aa5cd, type: 3}
+  audioSource: {fileID: 0}
 --- !u!60 &-6255850820606022084
 PolygonCollider2D:
   m_ObjectHideFlags: 0
